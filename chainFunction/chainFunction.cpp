@@ -24,3 +24,5 @@ int main()
     cout << bukunya.setJudul("Matemtika").getJudul(); //chain function calls
     return 0;
 }
+
+//
