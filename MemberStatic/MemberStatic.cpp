@@ -3,13 +3,17 @@
 using namespace std;
 
 class mahasiswa {
-public:
+private:
     static int nim;
+public:
     int id;
     string nama;
 
     void setID();
     void printAll();
+
+    static void setNim(int pNim) { nim = pNim; /*Definisi Function*/ }
+    static int getNim() { return nim; /*Definis Function*/ }
     mahasiswa(string pnama) :nama(pnama) { setID(); }
 };
 
@@ -28,6 +32,7 @@ void mahasiswa::printAll() {
 int main() {
     mahasiswa mhs1(" Aditya Maulana ");
     mahasiswa mhs2(" Taufiq Fathoni ");
+    mahasiswa::setNim(9);
     mahasiswa mhs3(" Naufal Dzakwan ");
     mahasiswa mhs4(" Yopang Difa ");
 
@@ -37,4 +42,5 @@ int main() {
     mhs4.printAll();
     return 0;
        
+    cout << "akses dari luar object = " << mahasiswa::getNim() << endl;
 }
