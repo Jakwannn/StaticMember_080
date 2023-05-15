@@ -7,9 +7,17 @@ class buku
     string judul;
 
 public:
-   
+    buku setJudul(string Judul)
+    {
+        this->judul = judul;
+        return *this; //chain function
+    }
+    string getJudul()
+    {
+        return this->judul;
+    }
 };
 int main()
 {
-    std::cout << "Hello World!\n";
+    
 }
